@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal, safe resets.
+   IMPORTANT: do not set display:flex on html/body/#root.
+   That combination, with min-height:100vh, breaks the height
+   calculation of any `fixed inset-0` child (like the mobile nav
+   panel) on several mobile browser engines — the fixed element
+   resolves its height against the flex item's content box instead
+   of the viewport, so it collapses to ~0 height instead of filling
+   the screen. Page-level flex layout (sticky footer, etc.) belongs
+   on the layout's own wrapper div, not on these global elements. */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
